@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Free Fire Tournament Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://yourbackgroundimageurl.com'); /* Replace with a Free Fire character background */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 1.5em;
+        }
+
+        .form-box {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+
+        .register-btn {
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .whatsapp-link {
+            margin-top: 20px;
+        }
+
+        .join-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Free Fire Tournament Registration</h1>
+        <h2>Matches every day at 3 PM and 9 PM</h2>
+
+        <div class="form-box">
+            <form id="registrationForm">
+                <input type="text" id="gameID" name="gameID" placeholder="Enter your Game ID" required>
+                <select id="platform" name="platform" required>
+                    <option value="">Select your Platform</option>
+                    <option value="Google">Google</option>
+                    <option value="Facebook">Facebook</option>
+                </select>
+                <input type="text" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp Number" required>
+                <button type="button" class="register-btn" onclick="register()">Register Now</button>
+            </form>
+
+            <div class="whatsapp-link" id="whatsappLink" style="display:none;">
+                <p>Join our WhatsApp group for further details:</p>
+                <a href="https://chat.whatsapp.com/EIxMMIYIL5h6r0IaUJ8vR3" target="_blank">
+                    <button class="join-btn">Join Group</button>
+                </a>
+                <p>Further info of Room No. and Password will be shared on WhatsApp 15 minutes before the game starts.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function register() {
+            // Get form data
+            const gameID = document.getElementById('gameID').value;
+            const platform = document.getElementById('platform').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+
+            // Simulate registration process (you can replace this with actual form submission)
+            if (gameID && platform && whatsapp) {
+                alert('Registration successful!');
+                document.getElementById('registrationForm').style.display = 'none';
+                document.getElementById('whatsappLink').style.display = 'block';
+            } else {
+                alert('Please fill out all fields');
+            }
+        }
+    </script>
+
+</body>
+</html>
